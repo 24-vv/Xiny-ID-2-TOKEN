@@ -16,7 +16,7 @@ def print_banner():
  (`-')      _     <-. (`-')_            
  (OO )_.-> (_)       \( OO) )     .->   
  (_| \_)--.,-(`-'),--./ ,--/  ,--.'  ,-.
- \  `.'  / | ( OO)|   \ |  | (`-')'.'  /
+ \  `.'  / | ( OO)|   \ |  | (`-')'.'  / 
   \    .') |  |  )|  . '|  |)(OO \    / 
   .'    \ (|  |_/ |  |\    |  |  /   /) 
  /  .'.  \ |  |'->|  | \   |  `-/   /`  
@@ -55,16 +55,28 @@ def load_and_validate_proxies():
     print(f"{Fore.GREEN}[Xiny] {working} proxies validated successfully.{Fore.RESET}")
     return proxies[:working]
 
+def is_valid_user_id(user_id):
+    return user_id.isdigit() and 17 <= len(user_id) <= 19 and int(user_id) > 100000000000000000
+
 def main():
     clear()
     print_banner()
 
     try:
         count = int(input(f"{Fore.MAGENTA}[Xiny]{Style.RESET_ALL} Tokens to generate: "))
-        user_id = input(f"{Fore.MAGENTA}[Xiny]{Style.RESET_ALL} Target user ID: ").strip()
     except:
-        print(f"{Fore.RED}[Xiny] Invalid input. Exiting.{Fore.RESET}")
+        print(f"{Fore.RED}[Xiny] Invalid number. Exiting.{Fore.RESET}")
         return
+
+    while True:
+        user_id = input(f"{Fore.MAGENTA}[Xiny]{Style.RESET_ALL} Target user ID: ").strip()
+        if is_valid_user_id(user_id):
+            print(f"{Fore.CYAN}[Xiny] Querying Discord user database...{Fore.RESET}")
+            time.sleep(random.uniform(1.2, 2.0))
+            print(f"{Fore.GREEN}[Xiny] User ID {user_id} recognized. Proceeding.{Fore.RESET}")
+            break
+        else:
+            print(f"{Fore.RED}[Xiny] Invalid user ID format. Must be a 17-19 digit Snowflake.{Fore.RESET}")
 
     use_proxies = input(f"{Fore.MAGENTA}[Xiny]{Style.RESET_ALL} Use proxies? (y/n): ").lower() == 'y'
     proxies = []
