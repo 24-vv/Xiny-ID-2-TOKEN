@@ -22,7 +22,7 @@ def print_banner():
  /  .'.  \ |  |'->|  | \   |  `-/   /`  
 `--'   '--'`--'   `--'  `--'    `--'    
 
-  Discord Token Generator | Version 3.4.2
+  Discord Token Generator | Version 1.0.0
         Engine: Xiny | Dev: 24-vv
 """ + Style.RESET_ALL)
 
