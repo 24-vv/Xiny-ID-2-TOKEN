@@ -12,10 +12,6 @@
 
 <div align="center">
   <img src="https://media.discordapp.net/attachments/1400194116620648499/1400194178042040380/image.png?ex=688bbff2&is=688a6e72&hm=9efb6fa493fb64227ec849a8bb5e7c52b3754f537774806a8947031e5c41c470&=&format=webp&quality=lossless" alt="Image Preview">
-
-<br />
-
-  <img src="https://media.discordapp.net/attachments/1400194116620648499/1400195058250158271/image.png?ex=688bc0c4&is=688a6f44&hm=217e37122ad52b6d40a276332eb21e25b3c557d2f0344ba6c61cc2b0a2a1683d&=&format=webp&quality=lossless&width=550&height=299" alt="Image Preview">
 </div>
 
 ## 🌪️ What does this tool do?
